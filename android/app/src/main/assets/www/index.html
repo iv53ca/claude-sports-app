@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f2f4f7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0e1218" media="(prefers-color-scheme: dark)"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png"><style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Дневник цикла A–D</title>
+<style>@font-face{font-family:"Golos Text";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Golos Text";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Golos Text";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-text-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Golos Text";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-text-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Golos Text";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-text-cyrillic-600-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Golos Text";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-text-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Golos Text";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/golos-text-cyrillic-700-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Golos Text";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/golos-text-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Unbounded";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/unbounded-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Unbounded";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/unbounded-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Unbounded";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/unbounded-cyrillic-700-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:"Unbounded";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/unbounded-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
+<style>
+/* Layout: one phone-width column, four screens behind a fixed bottom bar; the cycle is drawn as a lap split into four sectors. */
+:root{
+  --bg:#f2f4f7; --surface:#ffffff; --surface-2:#e9edf2;
+  --ink:#131923; --ink-2:#465163; --muted:#737e8f;
+  --line:#dde2ea; --axis:#b9c1cd;
+  --accent:#1f66c1; --accent-ink:#ffffff; --accent-soft:#e3edfa;
+  --series:#2a78d6;
+  --good:#006300; --danger:#b3261e; --warn-bg:#fff4d6; --warn-ink:#6b4a00;
+  --display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --body:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:14px; --gut:16px; --nav-h:62px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0e1218; --surface:#171c25; --surface-2:#212835;
+  --ink:#f1f4f8; --ink-2:#c2cad6; --muted:#8f9aab;
+  --line:#2a323f; --axis:#414b5b;
+  --accent:#4a93ea; --accent-ink:#08111d; --accent-soft:#1b2c44;
+  --series:#3987e5;
+  --good:#3fbf4a; --danger:#ff8a80; --warn-bg:#3a2f10; --warn-ink:#ffdf8a;
+  color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0e1218; --surface:#171c25; --surface-2:#212835;
+  --ink:#f1f4f8; --ink-2:#c2cad6; --muted:#8f9aab;
+  --line:#2a323f; --axis:#414b5b;
+  --accent:#4a93ea; --accent-ink:#08111d; --accent-soft:#1b2c44;
+  --series:#3987e5;
+  --good:#3fbf4a; --danger:#ff8a80; --warn-bg:#3a2f10; --warn-ink:#ffdf8a;
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;-webkit-text-size-adjust:100%}
+h1,h2,h3,p{margin:0}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.app{max-width:720px;margin:0 auto;padding-inline:var(--gut);padding-block:14px calc(var(--nav-h) + 28px);display:flex;flex-direction:column;gap:14px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em}
+.sync{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.sync i{width:7px;height:7px;border-radius:50%;background:var(--axis);display:block}
+.sync.ok i{background:var(--good)} .sync.local{color:var(--warn-ink)} .sync.local i{background:var(--warn-ink)}
+.tab{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.eyebrow{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.h2{font-size:18px;font-weight:700;line-height:1.25;text-wrap:balance}
+.sub{color:var(--ink-2);font-size:14px}
+.empty{color:var(--muted);font-size:14px}
+.notice{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:10px 12px;font-size:13.5px}
+
+/* lap strip */
+.lap{display:flex;flex-direction:column;gap:10px}
+.lap-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.lap-num{font-family:var(--display);font-weight:700;font-size:34px;line-height:1}
+.lap-of{color:var(--muted);font-size:15px}
+.phase{margin-left:auto;background:var(--accent-soft);color:var(--ink);border-radius:999px;padding:3px 10px;font-size:12.5px;font-weight:600}
+.sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.sector{display:flex;flex-direction:column;gap:5px;min-width:0}
+.sector .bar{height:8px;border-radius:2px;background:var(--surface-2)}
+.sector.done .bar{background:var(--accent)}
+.sector.next .bar{background:repeating-linear-gradient(135deg,var(--accent) 0 5px,var(--accent-soft) 5px 10px)}
+.sector .lbl{font-size:12px;color:var(--muted);display:flex;gap:5px;align-items:baseline}
+.sector .lbl b{font-family:var(--display);font-size:12px;color:var(--ink)}
+
+.next-row{display:flex;gap:14px;align-items:center}
+.big-letter{font-family:var(--display);font-weight:700;font-size:44px;line-height:1;width:72px;height:72px;flex:none;border-radius:16px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.next-row>div:last-child{min-width:0;display:flex;flex-direction:column;gap:3px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:10px 14px;font-weight:600;font-size:14.5px;min-height:44px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.ghost{border-color:transparent;color:var(--ink-2)}
+.btn.small{min-height:34px;padding:5px 10px;font-size:13px;font-weight:500}
+.btn.danger{color:var(--danger);border-color:var(--danger)}
+.actions .btn{flex:1 1 150px}
+.mark{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:12px}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label,.field .lab{font-size:12.5px;color:var(--muted);font-weight:500}
+.field input,.field textarea{border:1px solid var(--line);background:var(--bg);border-radius:9px;padding:9px 10px;min-height:42px;width:100%;min-width:0}
+.field textarea{font:inherit;font-size:12.5px;color:inherit;resize:vertical;word-break:break-all}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.seg button{border:1px solid var(--line);background:var(--surface);border-radius:10px;min-height:44px;font-family:var(--display);font-weight:700;font-size:15px}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+/* calendar */
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cal-head .m{font-weight:700;font-size:16px;text-transform:capitalize}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:18px;line-height:1}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal .wd{font-size:11px;color:var(--muted);text-align:center;padding-bottom:2px}
+.day{aspect-ratio:1/1.05;border:1px solid transparent;border-radius:9px;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:1px;padding:4px 0 0;font-size:12.5px;color:var(--ink-2);min-width:0;font-variant-numeric:tabular-nums}
+.day.out{visibility:hidden}
+.day.today{border-color:var(--accent);color:var(--ink);font-weight:700}
+.day .w{font-family:var(--display);font-weight:700;font-size:11px;line-height:1;background:var(--accent);color:var(--accent-ink);border-radius:5px;padding:3px 5px;letter-spacing:.04em}
+.day.has{background:var(--accent-soft)}
+.rows{display:flex;flex-direction:column}
+.row{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .l{font-family:var(--display);font-weight:700;width:30px;height:30px;border-radius:8px;background:var(--accent-soft);display:grid;place-items:center;flex:none;font-size:13px}
+.row .t{flex:1;min-width:0}
+.row .t small{display:block;color:var(--muted);font-size:12.5px}
+
+/* workouts */
+.w-head{display:flex;flex-direction:column;gap:6px}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.ex{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ex-h{display:flex;gap:10px;align-items:flex-start}
+.code{font-family:var(--display);font-weight:700;font-size:12px;background:var(--surface-2);border-radius:7px;padding:5px 7px;flex:none;margin-top:1px}
+.ex-h h3{font-size:16px;line-height:1.25;font-weight:700;text-wrap:balance}
+.en{color:var(--muted);font-size:12.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:4px 8px;font-size:13px;color:var(--ink-2)}
+.chip.strong{background:var(--accent-soft);border-color:transparent;color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+.ex img{width:100%;height:auto;border-radius:9px;display:block;background:var(--surface-2)}
+.ex details{border-top:1px solid var(--line);padding-top:8px}
+.ex summary{font-weight:600;font-size:14px;padding:6px 0;cursor:pointer}
+.prose{font-size:14.5px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.prose ul,.prose ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.prose em{color:var(--ink-2)}
+.prose .tw{overflow-x:auto;max-width:100%}
+.prose table{border-collapse:collapse;font-size:13.5px;min-width:100%}
+.prose th,.prose td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.prose th{background:var(--surface-2);font-weight:600}
+.formula{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:16px;background:var(--bg);border-radius:9px;padding:10px;text-align:center;overflow-x:auto}
+.links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px}
+
+/* measures */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0;display:flex;flex-direction:column;gap:2px}
+.tile .k{font-size:12px;color:var(--muted)}
+.tile .v{font-size:21px;font-weight:700;line-height:1.15}
+.tile .v small{font-size:12.5px;font-weight:500;color:var(--ink-2)}
+.tile .v.good{color:var(--good)}
+.mchips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.mchips button{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:500;min-height:36px}
+.mchips button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+#chart{position:relative;min-height:60px}
+#chart svg{display:block;width:100%;height:auto;touch-action:pan-y}
+.c-grid{stroke:var(--line);stroke-width:1} .c-goal{stroke:var(--axis);stroke-width:1}
+.c-tick{fill:var(--muted);font-size:11px;font-family:var(--body);font-variant-numeric:tabular-nums}
+.c-end{fill:var(--ink);font-size:12.5px;font-weight:700;font-family:var(--body)}
+.c-line{stroke:var(--series);stroke-width:2;fill:none;stroke-linejoin:round;stroke-linecap:round}
+.c-dot{fill:var(--series);stroke:var(--surface);stroke-width:2}
+.c-cross{stroke:var(--axis);stroke-width:1}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--surface);border-radius:8px;padding:6px 9px;font-size:12.5px;line-height:1.3;white-space:nowrap;transform:translate(-50%,-100%)}
+.tip b{display:block;font-size:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.grid2 .wide{grid-column:1/-1}
+.err{color:var(--danger);font-size:13.5px}
+.tw{overflow-x:auto;max-width:100%}
+table.mt{border-collapse:collapse;min-width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+table.mt th,table.mt td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+table.mt th{font-size:12px;color:var(--muted);font-weight:500}
+table.mt th:first-child,table.mt td:first-child{text-align:left;position:sticky;left:0;background:var(--surface)}
+table.mt td.act{display:flex;gap:6px;justify-content:flex-end}
+
+/* plan */
+.acc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:4px 16px}
+.acc summary{font-weight:700;font-size:15.5px;padding:12px 0;cursor:pointer}
+.acc .prose{padding-bottom:14px}
+
+.nav{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+.nav div{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);height:var(--nav-h)}
+.nav button{border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:12px;color:var(--muted);font-weight:500}
+.nav button i{width:22px;height:4px;border-radius:2px;background:transparent;display:block}
+.nav button[aria-current="page"]{color:var(--ink);font-weight:700}
+.nav button[aria-current="page"] i{background:var(--accent)}
+#toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + 16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:9px 14px;border-radius:10px;font-size:14px;z-index:6;max-width:calc(100% - 32px);text-align:center}
+@media (max-width:380px){ .tile .v{font-size:18px} .big-letter{width:60px;height:60px;font-size:36px} }
+@media (prefers-reduced-motion:no-preference){ .btn,.seg button,.mchips button{transition:background-color .12s,color .12s} }
+</style></head><body>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">Цикл A–D</div>
+    <div class="sync" id="sync"><i></i><span>Загрузка записей…</span></div>
+  </header>
+
+  <section class="tab" id="tab-today" aria-label="Сегодня"></section>
+
+  <section class="tab" id="tab-workouts" aria-label="Тренировки" hidden>
+    <div class="seg" id="w-seg" role="group" aria-label="Выбор тренировки"></div>
+    <div id="w-body" class="tab"></div>
+  </section>
+
+  <section class="tab" id="tab-measures" aria-label="Мерки" hidden>
+    <div class="tiles" id="tiles"></div>
+    <div class="card">
+      <div class="mchips" id="mchips" role="group" aria-label="Мерка на графике"></div>
+      <div class="h2" id="chart-title"></div>
+      <div id="chart"></div>
+    </div>
+    <form class="card" id="m-form" novalidate>
+      <div class="h2">Новая запись</div>
+      <div class="grid2">
+        <div class="field wide"><label for="m-date">Дата</label><input type="date" id="m-date"></div>
+        <div class="field"><label for="m-weight">Вес, кг</label><input id="m-weight" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label for="m-waist">Талия B, см</label><input id="m-waist" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label for="m-hips">Таз C, см</label><input id="m-hips" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label for="m-thigh">Бедро D, см</label><input id="m-thigh" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label for="m-bicep">Бицепс N, см</label><input id="m-bicep" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label for="m-chest">Грудь A, см</label><input id="m-chest" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label for="m-calf">Икра M, см</label><input id="m-calf" inputmode="decimal" autocomplete="off"></div>
+      </div>
+      <p class="sub" id="m-hint">Заполни то, что измерила. Пустые поля не сохраняются.</p>
+      <p class="err" id="m-err" hidden></p>
+      <div class="actions"><button class="btn primary" type="submit">Сохранить запись</button></div>
+    </form>
+    <div class="card">
+      <div class="h2">Все записи</div>
+      <div id="m-table"></div>
+    </div>
+  </section>
+
+  <section class="tab" id="tab-plan" aria-label="План" hidden></section>
+</div>
+
+<nav class="nav" aria-label="Разделы"><div>
+  <button type="button" data-tab="today"><i></i>Сегодня</button>
+  <button type="button" data-tab="workouts"><i></i>Тренировки</button>
+  <button type="button" data-tab="measures"><i></i>Мерки</button>
+  <button type="button" data-tab="plan"><i></i>План</button>
+</div></nav>
+<div id="toast" role="status" hidden></div>
+
+<script>const PLAN={"workouts": {"A": {"title": "Верх — жим и тяга", "intro": "Около 80 минут: 60 на силовую часть и 20 на ходьбу. Под упражнениями стоят фото начального и конечного положения, ссылка «фото» открывает поиск с другими примерами.", "ex": [{"code": "A1", "name": "Жим гантелей лёжа", "en": "Dumbbell Bench Press", "chips": ["3 × 8–10", "отдых 2 мин", "старт: гантели по 7–9 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=dumbbell+bench+press+technique"}], "imgs": [{"f": "a1", "alt": "Жим гантелей лёжа: гантели у груди и на прямых руках", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> грудь, передняя часть плеч, трицепс — толкающая сила для руля.<\/li>\n<li><b>Техника:<\/b> лопатки сведи и прижми к скамье, стопы упри в пол. Опускай гантели к нижней части груди, локти под 45° к корпусу. Выжимай вверх, не стукая гантелями.<\/li>\n<li><b>Ошибка:<\/b> локти разведены в стороны под 90° — это перегружает плечевой сустав.<\/li>\n<li><b>Нет скамьи или гантелей:<\/b> жим от груди в тренажёре (Chest Press Machine) · отжимания от пола или от скамьи (Push-ups).<\/li>\n<\/ul>"}, {"code": "A2", "name": "Тяга верхнего блока к груди", "en": "Lat Pulldown", "chips": ["3 × 8–12", "отдых 2 мин", "старт: 25–30 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=lat+pulldown+technique"}], "imgs": [{"f": "a2", "alt": "Тяга верхнего блока: руки прямые и гриф у верха груди", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> широчайшие мышцы спины — основа сильного верха и подготовка к подтягиваниям.<\/li>\n<li><b>Техника:<\/b> хват чуть шире плеч, бёдра зафиксируй валиками. Сначала опусти лопатки вниз, затем тяни гриф к верху груди, локти идут вниз к рёбрам. Возвращай гриф плавно, до полного выпрямления рук.<\/li>\n<li><b>Ошибка:<\/b> откидываться назад и дёргать вес корпусом.<\/li>\n<li><b>Нет тренажёра:<\/b> подтягивания в гравитроне (Assisted Pull-up Machine) · подтягивания с резиновой петлёй (Band-Assisted Pull-ups).<\/li>\n<\/ul>"}, {"code": "A3", "name": "Жим гантелей сидя", "en": "Seated Dumbbell Shoulder Press", "chips": ["3 × 8–12", "отдых 2 мин", "старт: гантели по 5–7 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=seated+dumbbell+shoulder+press+technique"}], "imgs": [{"f": "a3", "alt": "Жим гантелей сидя: гантели у ушей и над головой", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> дельтовидные мышцы — плечи, которые держат руль весь заезд.<\/li>\n<li><b>Техника:<\/b> спинка скамьи почти вертикально, поясница прижата. Гантели на уровне ушей, предплечья вертикальны. Выжимай вверх до почти прямых рук.<\/li>\n<li><b>Ошибка:<\/b> сильный прогиб в пояснице — значит, вес слишком большой.<\/li>\n<li><b>Нет гантелей:<\/b> жим в тренажёре на плечи (Shoulder Press Machine) · жим штанги сидя в машине Смита (Smith Machine Shoulder Press).<\/li>\n<\/ul>"}, {"code": "A4", "name": "Тяга горизонтального блока", "en": "Seated Cable Row", "chips": ["3 × 10–12", "отдых 2 мин", "старт: 25–30 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=seated+cable+row+technique"}], "imgs": [{"f": "a4", "alt": "Тяга горизонтального блока: руки вытянуты и рукоять у живота", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> середина спины и задняя часть плеч — осанка и удержание руля на себя.<\/li>\n<li><b>Техника:<\/b> спина прямая, колени слегка согнуты. Тяни рукоять к низу живота, в конце сведи лопатки на секунду. Корпус почти неподвижен.<\/li>\n<li><b>Ошибка:<\/b> раскачиваться корпусом вперёд-назад.<\/li>\n<li><b>Нет блока:<\/b> тяга гантели одной рукой в наклоне (One-Arm Dumbbell Row) · рычажная тяга (Plate-Loaded Row Machine, часто с надписью Hammer Strength).<\/li>\n<\/ul>"}, {"code": "A5", "name": "Разгибание рук на блоке с канатом", "en": "Cable Triceps Pushdown", "chips": ["3 × 10–15", "отдых 75 с", "старт: 10–15 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=rope+triceps+pushdown+technique"}], "imgs": [{"f": "a5", "alt": "Разгибание рук на блоке с канатом: верхняя и нижняя точки", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> трицепс — главная мышца для вида руки выше локтя.<\/li>\n<li><b>Техника:<\/b> локти прижаты к бокам и не двигаются. Разгибай руки вниз до конца, внизу разведи концы каната в стороны. Поднимай медленно.<\/li>\n<li><b>Ошибка:<\/b> локти «гуляют» вперёд — работу забирают плечи.<\/li>\n<li><b>Нет блока:<\/b> разгибание гантели из-за головы (Overhead Dumbbell Triceps Extension) · обратные отжимания от скамьи (Bench Dips).<\/li>\n<\/ul>"}, {"code": "A6", "name": "Прогулка фермера", "en": "Farmer's Carry", "chips": ["3 × 30–40 м", "отдых 90 с", "старт: гантели по 14–18 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=farmer+carry+exercise+technique"}], "imgs": [{"f": "a6", "alt": "Прогулка фермера: подъём снарядов и ходьба с ними", "w": 1000, "h": 330}], "html": "<p><em>На фото — специальные рукояти с блинами. В зале то же самое делают с гантелями или гирями.<\/em><\/p>\n<ul>\n<li><b>Зачем:<\/b> хват, предплечья, верх спины и кор одновременно — самое «картинговое» упражнение дня.<\/li>\n<li><b>Техника:<\/b> возьми тяжёлые гантели или гири, встань ровно, плечи назад и вниз. Иди короткими шагами, не раскачиваясь. Вес подобран верно, если к концу отрезка пальцы почти разжимаются.<\/li>\n<li><b>Ошибка:<\/b> сутулиться и поднимать плечи к ушам.<\/li>\n<li><b>Негде ходить:<\/b> удержание гантелей стоя (Dumbbell Hold), 3 × 40–60 с · вис на турнике (Dead Hang), 3 × 20–40 с.<\/li>\n<\/ul>"}, {"code": "A7", "name": "Боковая планка", "en": "Side Plank", "chips": ["3 × 30–45 с на каждую сторону", "отдых 45 с", "без веса"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=side+plank+technique"}], "imgs": [{"f": "a7", "alt": "Боковая планка: исходное положение и удержание с поднятым тазом", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> косые мышцы живота удерживают корпус в поворотах под боковой нагрузкой.<\/li>\n<li><b>Техника:<\/b> упор на предплечье, локоть под плечом. Тело — прямая линия от головы до стоп, таз не провисает.<\/li>\n<li><b>Ошибка:<\/b> заваливать таз назад или вниз.<\/li>\n<li><b>Варианты:<\/b> боковая планка с колен (Kneeling Side Plank), если тяжело · «чемоданная» ходьба с одной гантелью (Suitcase Carry), 3 × 20 м на сторону.<\/li>\n<\/ul>"}, {"code": "A8", "name": "Блок для ног: ходьба в горку", "en": "Incline Treadmill Walk", "chips": ["20 мин", "уклон 8–10%", "скорость 4,5–5,5 км/ч", "пульс зоны 2"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=incline+treadmill+walking+form"}], "imgs": [{"f": "a8", "alt": "Ходьба на беговой дорожке", "w": 1000, "h": 331}], "html": "<ul>\n<li><b>Зачем:<\/b> главный блок для ног в цикле. За 20 минут уходит примерно 150–190 ккал при весе 76 кг, а сопротивление слишком мало, чтобы мышцы бедра росли.<\/li>\n<li><b>Техника:<\/b> шаг с пятки на носок, корпус чуть наклонён вперёд от голеностопа, руки свободно работают. За поручни не держись — они снимают часть нагрузки.<\/li>\n<li><b>Настройка:<\/b> пульс выше зоны 2 — снижай уклон, а не скорость. Как посчитать зону 2, написано в разделе «Кардио для ног и шаги».<\/li>\n<li><b>Нет дорожки:<\/b> лестничный тренажёр (Stair Climber, он же StairMaster) в спокойном темпе · эллиптический тренажёр (Elliptical Trainer).<\/li>\n<\/ul>"}], "strength": "Верх: жим и тяга", "legs": "Ходьба в горку, 20 мин", "min": 80}, "B": {"title": "Низ и кор", "intro": "Около 70 минут: 55 на силовую часть и 15 на ходьбу. Ноги работают на поддержку: 12 подходов, в каждом остаётся 2–3 повтора в запасе.", "ex": [{"code": "B1", "name": "Румынская тяга", "en": "Romanian Deadlift, RDL", "chips": ["3 × 8–10", "отдых 2–3 мин", "старт: штанга 30–40 кг или гантели по 12–16 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=romanian+deadlift+technique"}], "imgs": [{"f": "b1", "alt": "Румынская тяга: нижняя точка с отведённым тазом и положение стоя", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> задняя поверхность бедра, ягодицы и разгибатели спины — без нагрузки на объём квадрицепса.<\/li>\n<li><b>Техника:<\/b> стопы на ширине таза, колени чуть согнуты и не меняют угол. Отводи таз назад, штанга скользит вдоль бёдер до середины голени. Спина прямая всё время. Вставай, толкая таз вперёд.<\/li>\n<li><b>Ошибка:<\/b> круглая поясница. Опускай штангу только до той точки, где спина остаётся прямой.<\/li>\n<li><b>Нет штанги:<\/b> гиперэкстензия (45° Back Extension) · становая тяга с гирей (Kettlebell Deadlift).<\/li>\n<\/ul>"}, {"code": "B2", "name": "Ягодичный мост со штангой", "en": "Barbell Hip Thrust", "chips": ["3 × 10–12", "отдых 2 мин", "старт: 40–50 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=barbell+hip+thrust+technique"}], "imgs": [{"f": "b2", "alt": "Ягодичный мост со штангой: таз внизу и таз наверху", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> ягодицы. Упражнение подтягивает форму таза и почти не грузит перед бедра.<\/li>\n<li><b>Техника:<\/b> лопатки на краю скамьи, штанга на сгибе бёдер через мягкую накладку. Стопы под коленями. Поднимай таз до прямой линии колени — плечи, наверху пауза 1 секунда. Подбородок прижат к груди.<\/li>\n<li><b>Ошибка:<\/b> прогибать поясницу вместо того, чтобы дожимать ягодицами.<\/li>\n<li><b>Нет штанги:<\/b> тренажёр для ягодичного моста (Hip Thrust Machine) · мост на одной ноге с опорой на скамью (Single-Leg Hip Thrust).<\/li>\n<\/ul>"}, {"code": "B3", "name": "Гоблет-присед", "en": "Goblet Squat", "chips": ["2 × 10–12", "отдых 2 мин", "старт: гантель или гиря 10–14 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=goblet+squat+technique"}], "imgs": [{"f": "b3", "alt": "Гоблет-присед с гирей: положение стоя и нижняя точка", "w": 1000, "h": 331}], "html": "<ul>\n<li><b>Зачем:<\/b> поддержать силу квадрицепса для педали тормоза. Два подхода — этого хватает, чтобы сохранить, но не растить.<\/li>\n<li><b>Техника:<\/b> гантель у груди, локти вниз. Стопы чуть шире плеч, носки слегка наружу. Садись между пяток до параллели бедра с полом, колени смотрят по носкам.<\/li>\n<li><b>Ошибка:<\/b> отрывать пятки и заваливать колени внутрь.<\/li>\n<li><b>Нет гантели:<\/b> жим ногами (Leg Press), 2 × 12 · приседания на скамью с собственным весом (Box Squat).<\/li>\n<\/ul>"}, {"code": "B4", "name": "Сгибание ног в тренажёре", "en": "Leg Curl", "chips": ["2 × 12–15", "отдых 90 с", "старт: 20–25 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=lying+leg+curl+technique"}], "imgs": [{"f": "b4", "alt": "Сгибание ног лёжа в тренажёре: ноги прямые и ноги согнуты", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> задняя поверхность бедра — баланс с квадрицепсом и здоровье коленей.<\/li>\n<li><b>Техника:<\/b> валик чуть выше пяток, таз прижат к сиденью или лежаку. Сгибай ноги до конца, опускай 3 секунды.<\/li>\n<li><b>Ошибка:<\/b> отрывать таз и помогать поясницей.<\/li>\n<li><b>Нет тренажёра:<\/b> сгибание ног на фитболе (Stability Ball Leg Curl) · сгибание ног на скользящих дисках (Slider Leg Curl).<\/li>\n<\/ul>"}, {"code": "B5", "name": "Отведение бёдер в тренажёре", "en": "Hip Abduction Machine", "chips": ["2 × 15", "отдых 60 с", "старт: 25–35 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=hip+abduction+machine+technique"}], "imgs": [{"f": "b5", "alt": "Отведение бёдер в тренажёре: колени вместе и колени разведены", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> средняя ягодичная мышца стабилизирует таз и колени.<\/li>\n<li><b>Техника:<\/b> спина прижата, разводи колени плавно, в крайней точке пауза 1 секунда. Своди медленно, не бросая вес.<\/li>\n<li><b>Ошибка:<\/b> работать рывками с большим весом.<\/li>\n<li><b>Нет тренажёра:<\/b> шаги в сторону с резинкой над коленями (Lateral Band Walk) · отведение ноги на нижнем блоке (Cable Hip Abduction).<\/li>\n<\/ul>"}, {"code": "B6", "name": "Жим Паллофа", "en": "Pallof Press", "chips": ["3 × 10–12 на каждую сторону", "отдых 60 с", "старт: 5–10 кг на блоке"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=pallof+press+technique"}], "imgs": [{"f": "b6", "alt": "Жим Паллофа: рукоять у груди и на вытянутых руках", "w": 1000, "h": 279}], "html": "<ul>\n<li><b>Зачем:<\/b> кор учится не давать корпусу разворачиваться — именно это нужно в повороте.<\/li>\n<li><b>Техника:<\/b> встань боком к блоку, рукоять на уровне груди. Выжимай руки вперёд и возвращай к груди, трос тянет тебя в сторону — не поддавайся. Таз и плечи смотрят строго вперёд.<\/li>\n<li><b>Ошибка:<\/b> разворачивать корпус к блоку.<\/li>\n<li><b>Нет блока:<\/b> то же с резиновой лентой (Band Pallof Press) · «мёртвый жук» (Dead Bug), 3 × 10 на сторону.<\/li>\n<\/ul>"}, {"code": "B7", "name": "Подъём коленей в висе", "en": "Hanging Knee Raise", "chips": ["3 × 10–12", "отдых 60 с", "без веса"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=hanging+knee+raise+technique"}], "imgs": [{"f": "b7", "alt": "Подъём коленей в висе: прямой вис и колени у груди", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> прямая мышца живота и заодно хват.<\/li>\n<li><b>Техника:<\/b> вис на турнике, плечи опущены от ушей. Подтяни колени к груди, слегка скругляя поясницу. Опускай медленно, без раскачки.<\/li>\n<li><b>Ошибка:<\/b> махать ногами по инерции.<\/li>\n<li><b>Тяжело висеть:<\/b> подъём коленей в упоре на локтях (Captain's Chair Knee Raise) · обратные скручивания на полу (Reverse Crunch).<\/li>\n<\/ul>"}, {"code": "B8", "name": "Блок для ног: лёгкая ходьба в горку", "en": "Easy Incline Walk", "chips": ["15 мин", "уклон 4–6%", "скорость 4,5–5 км/ч"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=incline+treadmill+walking+form"}], "imgs": [], "html": "<ul>\n<li><b>Зачем:<\/b> после силовой на ноги ходьба разгоняет кровоток, уменьшает боль в мышцах на следующий день и добавляет расход калорий.<\/li>\n<li><b>Техника:<\/b> та же, что в A8, но уклон ниже — ноги уже поработали. Дыхание ровное, можешь спокойно разговаривать.<\/li>\n<li><b>Ошибка:<\/b> превращать блок в гонку. Здесь не нужен ни высокий пульс, ни большой уклон.<\/li>\n<li><b>Нет дорожки:<\/b> эллиптический тренажёр (Elliptical Trainer) на малом сопротивлении · быстрая ходьба на улице, 20 минут.<\/li>\n<\/ul>"}], "strength": "Низ (поддержка) и кор", "legs": "Лёгкая ходьба в горку, 15 мин", "min": 70}, "C": {"title": "Верх — тяга, плечи, руки, шея", "intro": "Около 80 минут: 60 на силовую часть и 20 на бег с ходьбой. Если до трассы меньше 48 часов — минус один подход везде и без C7.", "ex": [{"code": "C1", "name": "Подтягивания в гравитроне", "en": "Assisted Pull-up Machine", "chips": ["3 × 6–10", "отдых 2–3 мин", "старт: противовес 40–50 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=assisted+pull+up+machine+technique"}], "imgs": [{"f": "c1", "alt": "Подтягивания с резиновой петлёй: вис и верхняя точка", "w": 1000, "h": 743}], "html": "<p><em>На фото — вариант с резиновой петлёй. В гравитроне движение такое же, только колени стоят на платформе.<\/em><\/p>\n<ul>\n<li><b>Зачем:<\/b> путь к подтягиваниям с собственным весом — лучший показатель сильного верха.<\/li>\n<li><b>Техника:<\/b> хват чуть шире плеч, колени на платформе. Тянись грудью к перекладине, локти вниз и назад. Опускайся 3 секунды до прямых рук.<\/li>\n<li><b>Важно:<\/b> противовес помогает, поэтому прогрессия обратная — раз в 2–3 цикла уменьшай его на 5 кг.<\/li>\n<li><b>Нет гравитрона:<\/b> тяга верхнего блока обратным хватом (Reverse-Grip Lat Pulldown) · негативные подтягивания — запрыгнуть наверх и опускаться 5 секунд (Negative Pull-ups), 3 × 4–6.<\/li>\n<\/ul>"}, {"code": "C2", "name": "Жим гантелей на наклонной скамье", "en": "Incline Dumbbell Press", "chips": ["3 × 8–12", "отдых 2 мин", "старт: гантели по 6–8 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=incline+dumbbell+press+technique"}], "imgs": [{"f": "c2", "alt": "Жим гантелей на наклонной скамье: гантели у груди и на прямых руках", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> верх груди и передняя часть плеч.<\/li>\n<li><b>Техника:<\/b> наклон скамьи 30°, лопатки сведены. Опускай гантели к верху груди, локти под 45°. Выжимай вверх и чуть к центру.<\/li>\n<li><b>Ошибка:<\/b> наклон 45° и выше — жим превращается в плечевой.<\/li>\n<li><b>Нет наклонной скамьи:<\/b> жим в машине Смита на наклонной (Smith Machine Incline Press) · отжимания от пола (Push-ups).<\/li>\n<\/ul>"}, {"code": "C3", "name": "Тяга с упором грудью", "en": "Chest-Supported Row", "chips": ["3 × 10–12", "отдых 2 мин", "старт: 20–30 кг в тренажёре или гантели по 8–10 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=chest+supported+row+technique"}], "imgs": [{"f": "c3", "alt": "Тяга с упором грудью в рычажном тренажёре: руки вытянуты и локти отведены назад", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> середина спины без нагрузки на поясницу, которая устала во вторник.<\/li>\n<li><b>Техника:<\/b> грудь лежит на подушке. Тяни локти назад вдоль корпуса, своди лопатки, пауза 1 секунда. Не отрывай грудь от упора.<\/li>\n<li><b>Ошибка:<\/b> тянуть кистями и сгибать запястья вместо движения локтями.<\/li>\n<li><b>Нет тренажёра:<\/b> тяга гантелей лёжа грудью на наклонной скамье (Incline Bench Dumbbell Row) · тяга горизонтального блока (Seated Cable Row).<\/li>\n<\/ul>"}, {"code": "C4", "name": "Разведение гантелей в стороны", "en": "Dumbbell Lateral Raise", "chips": ["3 × 12–15", "отдых 60 с", "старт: гантели по 3–4 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=dumbbell+lateral+raise+technique"}], "imgs": [{"f": "c4", "alt": "Разведение гантелей в стороны: руки внизу и на уровне плеч", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> средняя часть плеча. Широкие плечи зрительно уравновешивают бёдра.<\/li>\n<li><b>Техника:<\/b> лёгкий наклон вперёд, локти чуть согнуты. Поднимай руки в стороны до уровня плеч, локоть ведёт движение. Опускай 2–3 секунды.<\/li>\n<li><b>Ошибка:<\/b> брать тяжёлые гантели и закидывать их рывком.<\/li>\n<li><b>Варианты:<\/b> разведение на нижнем блоке одной рукой (Cable Lateral Raise) · тренажёр для дельт (Lateral Raise Machine).<\/li>\n<\/ul>"}, {"code": "C5", "name": "Тяга каната к лицу", "en": "Face Pull", "chips": ["3 × 12–15", "отдых 60 с", "старт: 10–15 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=face+pull+technique"}], "imgs": [{"f": "c5", "alt": "Тяга каната к лицу: руки вытянуты и канат у лица, локти высоко", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> задняя часть плеч и мышцы вокруг лопаток. Они компенсируют сутулую посадку в карте.<\/li>\n<li><b>Техника:<\/b> блок на уровне лица, канат держи большими пальцами к себе. Тяни к переносице, локти высоко и в стороны, в конце разверни кисти назад.<\/li>\n<li><b>Ошибка:<\/b> тянуть к груди с опущенными локтями.<\/li>\n<li><b>Нет блока:<\/b> разведение гантелей в наклоне (Reverse Dumbbell Fly) · обратная «бабочка» (Reverse Pec Deck).<\/li>\n<\/ul>"}, {"code": "C6", "name": "Суперсет: бицепс и трицепс", "en": "", "chips": ["3 круга", "отдых 75 с после пары"], "links": [{"t": "фото бицепс", "u": "https://yandex.ru/images/search?text=dumbbell+biceps+curl+technique"}, {"t": "фото трицепс", "u": "https://yandex.ru/images/search?text=overhead+cable+triceps+extension+technique"}], "imgs": [{"f": "c6a", "alt": "Сгибание рук с гантелями: руки внизу и гантели у плеч", "w": 1000, "h": 330}, {"f": "c6b", "alt": "Разгибание рук из-за головы на блоке: канат за головой и руки выпрямлены", "w": 1000, "h": 330}], "html": "<p>Суперсет — два упражнения подряд без отдыха, отдых после второго.<\/p>\n<ul>\n<li><b>Сгибание рук с гантелями (Dumbbell Biceps Curl):<\/b> 10–12 повторов, старт по 5–7 кг. Локти прижаты к бокам, корпус не раскачивается.<\/li>\n<li>Разгибание рук из-за головы на блоке (Overhead Cable Triceps Extension): 10–12 повторов, старт 10–12,5 кг. Локти смотрят вперёд и не расходятся, двигается только предплечье.<\/li>\n<li><b>Замены для бицепса:<\/b> сгибание на нижнем блоке (Cable Curl) · сгибание с изогнутым грифом (EZ-Bar Curl).<\/li>\n<li><b>Замены для трицепса:<\/b> разгибание гантели из-за головы (Overhead Dumbbell Triceps Extension) · отжимания узким хватом (Close-Grip Push-ups).<\/li>\n<\/ul>"}, {"code": "C7", "name": "Изометрия шеи", "en": "Neck Isometrics", "chips": ["4 направления × 3 удержания по 10 с", "отдых 20 с"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=neck+isometric+exercises"}], "imgs": [{"f": "c7a", "alt": "Изометрия шеи: давление ладонями на лоб и на затылок", "w": 1000, "h": 330}, {"f": "c7b", "alt": "Изометрия шеи: давление ладонью на висок", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> шея держит голову со шлемом в поворотах и на торможении.<\/li>\n<li><b>Техника:<\/b> дави ладонью на лоб, шея сопротивляется, голова не двигается. Затем на затылок, на правый и левый висок. Усилие 50–70% от максимума, дыхание ровное.<\/li>\n<li><b>Правило:<\/b> никаких рывков и вращений головой под нагрузкой. Боль или головокружение — прекращай.<\/li>\n<li><b>Варианты:<\/b> то же с резиновой лентой, закреплённой на стойке (Band Neck Isometrics) · удержание головы на весу лёжа на краю скамьи (Lying Neck Hold), 3 × 15–20 с.<\/li>\n<\/ul>"}, {"code": "C8", "name": "Блок для ног: бег с ходьбой", "en": "Run-Walk Intervals", "chips": ["20 мин: 2 мин трусцой и 2 мин шагом, 5 кругов", "дорожка или улица"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=jogging+running+form+beginner"}], "imgs": [{"f": "c8", "alt": "Лёгкий бег на дорожке", "w": 1000, "h": 331}], "html": "<ul>\n<li><b>Зачем:<\/b> бег тратит больше калорий в минуту, чем ходьба. Лёгкий бег в разговорном темпе объём бедра не увеличивает — его растят спринты и прыжки.<\/li>\n<li><b>Техника:<\/b> темп, при котором можешь говорить фразами. Шаг короткий и частый, стопа приземляется под телом, а не далеко впереди. Плечи расслаблены, на дорожке уклон 1%. Нужны беговые кроссовки.<\/li>\n<li><b>Прогрессия:<\/b> циклы 1–2 — 2 мин бега и 2 мин шага, 5 кругов. Циклы 3–4 — 3 и 2, 4 круга. Циклы 5–6 — 4 и 1, 4 круга. Дальше — 20 минут без остановки.<\/li>\n<li><b>Боль в коленях или голенях, либо бег не нравится:<\/b> эллиптический тренажёр (Elliptical Trainer), 20 минут · ходьба в горку (Incline Treadmill Walk), как в A8.<\/li>\n<\/ul>"}], "strength": "Верх: тяга, плечи, руки, шея", "legs": "Бег с ходьбой, 20 мин", "min": 80}, "D": {"title": "Всё тело и картинг-блок", "intro": "Около 60 минут вместе с греблей и ходьбой. Темп выше, отдых короче — эта тренировка даёт и силу, и расход калорий.", "ex": [{"code": "D1", "name": "Тяга гантели одной рукой", "en": "One-Arm Dumbbell Row", "chips": ["3 × 10 на каждую руку", "отдых 60 с", "старт: 12–16 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=one+arm+dumbbell+row+technique"}], "imgs": [{"f": "d1", "alt": "Тяга гантели одной рукой: рука внизу и гантель у пояса", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> спина и хват, каждая сторона отдельно — выравнивает разницу между руками.<\/li>\n<li><b>Техника:<\/b> колено и ладонь одной стороны на скамье, спина параллельна полу. Тяни гантель к поясу, локоть вдоль корпуса. Опускай до полного растяжения.<\/li>\n<li><b>Ошибка:<\/b> разворачивать корпус вслед за гантелью.<\/li>\n<li><b>Варианты:<\/b> тяга нижнего блока одной рукой (Single-Arm Cable Row) · горизонтальные подтягивания на петлях или низкой перекладине (Inverted Row).<\/li>\n<\/ul>"}, {"code": "D2", "name": "Отжимания", "en": "Push-ups", "chips": ["3 подхода, каждый — до 2 повторов в запасе", "отдых 90 с"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=push+up+proper+form"}], "imgs": [{"f": "d2", "alt": "Отжимания: упор лёжа и нижняя точка", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> грудь, трицепс и кор в одном движении.<\/li>\n<li><b>Техника:<\/b> ладони чуть шире плеч, тело — прямая линия. Опускайся грудью до 3–5 см от пола, локти под 45° к корпусу.<\/li>\n<li><b>Тяжело от пола:<\/b> отжимайся от скамьи или грифа в машине Смита — чем выше опора, тем легче. Каждые 2 цикла опускай опору ниже.<\/li>\n<li><b>Варианты:<\/b> жим от груди в тренажёре (Chest Press Machine) · жим гантелей лёжа (Dumbbell Bench Press).<\/li>\n<\/ul>"}, {"code": "D3", "name": "Махи гирей", "en": "Kettlebell Swing", "chips": ["3 × 15", "отдых 90 с", "старт: гиря 12–16 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=kettlebell+swing+technique"}], "imgs": [{"f": "d3", "alt": "Махи гирей: положение стоя и наклон с гирей между ног", "w": 1000, "h": 331}], "html": "<p><em>На фото — вариант одной рукой. В плане гирю держат двумя руками, движение таза то же.<\/em><\/p>\n<ul>\n<li><b>Зачем:<\/b> ягодицы и задняя поверхность бедра во взрывном режиме, высокий пульс. Объём ног от этого не растёт.<\/li>\n<li><b>Техника:<\/b> это наклон, а не присед. Отведи таз назад, гиря уходит между ног, спина прямая. Резко вытолкни таз вперёд — гиря взлетает до уровня груди сама. Руки только держат.<\/li>\n<li><b>Ошибка:<\/b> приседать и поднимать гирю плечами.<\/li>\n<li><b>Варианты:<\/b> протяжка троса между ног (Cable Pull-Through), 3 × 12–15 · румынская тяга с лёгкими гантелями, 3 × 12.<\/li>\n<\/ul>"}, {"code": "D4", "name": "«Руль» с блином", "en": "Plate Bus Driver", "chips": ["3 × 30–40 с", "отдых 60 с", "старт: блин 5 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=plate+bus+driver+exercise"}], "imgs": [{"f": "d4", "alt": "Подъём блина перед собой: блин внизу и на вытянутых руках", "w": 1000, "h": 330}], "html": "<p><em>Точного фото «руля» в базе нет. На фото — подъём блина перед собой: хват тот же, но в «руле» блин остаётся на уровне груди и поворачивается влево и вправо.<\/em><\/p>\n<ul>\n<li><b>Зачем:<\/b> плечи и предплечья в том же положении, что на руле.<\/li>\n<li><b>Техника:<\/b> держи блин двумя руками перед собой на уровне груди, руки слегка согнуты. Поворачивай его влево и вправо, как руль, на 90° в каждую сторону. Плечи опущены.<\/li>\n<li><b>Ошибка:<\/b> опускать руки ниже груди и поднимать плечи к ушам.<\/li>\n<li><b>Варианты:<\/b> статическое удержание блина перед собой (Plate Front Hold), 3 × 30 с · подъём гантелей перед собой (Dumbbell Front Raise), 3 × 12 по 3–4 кг.<\/li>\n<\/ul>"}, {"code": "D5", "name": "Сгибание и разгибание запястий", "en": "Wrist Curl и Reverse Wrist Curl", "chips": ["2 × 15 каждого", "отдых 45 с", "старт: гантели по 3–5 кг на сгибание, 2–3 кг на разгибание"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=wrist+curl+reverse+wrist+curl+technique"}], "imgs": [{"f": "d5a", "alt": "Сгибание запястий ладонями вверх, предплечья на скамье", "w": 1000, "h": 330}, {"f": "d5b", "alt": "Разгибание запястий ладонями вниз, предплечья на скамье", "w": 1000, "h": 330}], "html": "<ul>\n<li><b>Зачем:<\/b> выносливость предплечий, чтобы руки не «забивались» к концу заезда.<\/li>\n<li><b>Техника:<\/b> предплечья лежат на бёдрах или скамье, кисти свисают. Ладони вверх — сгибание, ладони вниз — разгибание. Двигается только кисть.<\/li>\n<li><b>Ошибка:<\/b> большой вес и короткая амплитуда.<\/li>\n<li><b>Варианты:<\/b> накручивание груза на валик (Wrist Roller), 3 подъёма · кистевой эспандер (Hand Gripper), 3 × 15–20.<\/li>\n<\/ul>"}, {"code": "D6", "name": "«Чемоданная» ходьба", "en": "Suitcase Carry", "chips": ["3 × 20–30 м на каждую сторону", "отдых 60 с", "старт: гантель 14–18 кг"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=suitcase+carry+exercise+technique"}], "imgs": [], "html": "<ul>\n<li><b>Зачем:<\/b> вес с одной стороны тянет корпус вбок, кор его удерживает. Та же задача, что в быстром повороте.<\/li>\n<li><b>Техника:<\/b> одна тяжёлая гантель в руке, как чемодан. Иди ровно, плечи на одной высоте, корпус не наклоняется.<\/li>\n<li><b>Ошибка:<\/b> наклоняться в сторону от веса.<\/li>\n<li><b>Варианты:<\/b> прогулка фермера с двумя гантелями (Farmer's Carry) · боковая планка (Side Plank), 3 × 30–45 с.<\/li>\n<\/ul>"}, {"code": "D7", "name": "Шея с резиновой лентой", "en": "Band Neck Isometrics", "chips": ["4 направления × 2 удержания по 10–15 с", "отдых 20 с"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=band+neck+isometric+exercise"}], "imgs": [], "html": "<ul>\n<li><b>Техника:<\/b> лента закреплена на стойке на уровне головы и надета на лоб, затылок или висок. Отойди, чтобы лента натянулась, и держи голову ровно.<\/li>\n<li><b>Нет ленты:<\/b> изометрия ладонью, как в C7.<\/li>\n<\/ul>"}, {"code": "D8", "name": "Интервалы на гребном тренажёре", "en": "Rowing Machine", "chips": ["8 кругов: 30 с быстро и 60 с спокойно", "всего 12 минут"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=rowing+machine+technique"}], "imgs": [{"f": "d8", "alt": "Гребной тренажёр: начало гребка и конец гребка", "w": 1000, "h": 331}], "html": "<ul>\n<li><b>Зачем:<\/b> высокий расход за короткое время, работают спина и руки. Быстрый отрезок — на 8 из 10 по ощущениям.<\/li>\n<li><b>Техника:<\/b> порядок «ноги — корпус — руки» на гребке и «руки — корпус — ноги» на возврате. Спина прямая.<\/li>\n<li><b>Варианты:<\/b> лыжный тренажёр (SkiErg) · велотренажёр с рукоятями (Air Bike, он же Assault Bike).<\/li>\n<\/ul>"}, {"code": "D9", "name": "Блок для ног: ходьба в горку на заминку", "en": "Incline Walk Cool-down", "chips": ["10 мин", "уклон 5–8%", "скорость 4,5–5 км/ч"], "links": [{"t": "фото", "u": "https://yandex.ru/images/search?text=incline+treadmill+walking+form"}], "imgs": [], "html": "<ul>\n<li><b>Зачем:<\/b> после интервалов пульс опускается плавно, а ноги получают ещё 10 минут спокойной работы.<\/li>\n<li><b>Техника:<\/b> как в A8. Первые 2 минуты иди без уклона, пока не восстановится дыхание.<\/li>\n<li><b>Нет дорожки:<\/b> эллиптический тренажёр (Elliptical Trainer) · ходьба на улице быстрым шагом, 15 минут.<\/li>\n<\/ul>"}], "strength": "Всё тело и картинг-блок", "legs": "Гребля 12 мин и ходьба 10 мин", "min": 60}}, "phases": [{"from": 1, "to": 2, "name": "Вработка", "text": "2 подхода вместо 3, в запасе 3 повтора. Задача — техника и подбор весов"}, {"from": 3, "to": 6, "name": "Объём", "text": "3 подхода, в запасе 2 повтора, двойная прогрессия"}, {"from": 7, "to": 7, "name": "Разгрузка", "text": "Те же веса, по 2 подхода. Тело восстанавливается, сила после неё растёт"}, {"from": 8, "to": 12, "name": "Сила", "text": "A1, A2, B1, C1, C2 — по 4 подхода на 6–8 повторов с большим весом. Остальное без изменений"}], "ref": [{"title": "Исходная точка и сроки", "html": "<p>Цель 66 кг — это середина нормы, без экстрима: индекс массы тела опустится с 26,3 до 22,8. Индекс массы тела (ИМТ) = вес в кг, делённый на квадрат роста в метрах; норма 18,5–25.<\/p>\n<p>Что видно по меркам:<\/p>\n<ul>\n<li>Талия 84 см при бёдрах 109 см — соотношение 0,77. Жир откладывается в основном ниже талии, тип «груша».<\/li>\n<li><b>Бедро 66 см и икра 38 см при бицепсе 29 см:<\/b> низ заметно массивнее верха. План это выравнивает — верх нагружаем, низ поддерживаем.<\/li>\n<li>При типе «груша» талия худеет первой, бёдра — последними. Это порядок, заданный генетикой, а не ошибка в тренировках.<\/li>\n<\/ul>\n<p>Безопасный темп — 0,5–0,7 кг в неделю. Быстрее не выйдет без потери мышц, силы и концентрации, а они нужны на трассе.<\/p>\n<div class=\"tw\"><table>\n<thead>\n<tr>\n<th>Срок<\/th>\n<th>Чего ждать<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>Недели 1–2<\/td>\n<td>−1–2 кг, часть из них вода; веса в упражнениях растут каждую тренировку<\/td>\n<\/tr>\n<tr>\n<td>Недели 3–4<\/td>\n<td>Талия обычно −2–3 см, одежда сидит свободнее<\/td>\n<\/tr>\n<tr>\n<td>Недели 6–8<\/td>\n<td>Разница видна на фото; плечи и руки выглядят плотнее<\/td>\n<\/tr>\n<tr>\n<td>Неделя 12<\/td>\n<td>−6–7 кг<\/td>\n<\/tr>\n<tr>\n<td>Недели 18–20<\/td>\n<td>−10 кг<\/td>\n<\/tr>\n<\/tbody>\n<\/table><\/div>"}, {"title": "Ноги и руки: стратегия", "html": "<p>Локально убрать жир нельзя: упражнения на ноги не сжигают жир именно на ногах. Объём бедра уменьшается только вместе с общим процентом жира, поэтому главный рычаг для ног — дефицит калорий, а не выбор упражнений.<\/p>\n<p><strong>Ноги — в поддерживающем режиме.<\/strong><\/p>\n<ul>\n<li>Одна силовая на низ за цикл, около 12 рабочих подходов на все ноги. Программы на рост дают 20 и больше.<\/li>\n<li><b>Акцент на заднюю поверхность бедра и ягодицы:<\/b> румынская тяга, ягодичный мост. Квадрицепс получает 2 подхода, икры — ноль.<\/li>\n<li>Ни один подход на ноги не делаем до отказа.<\/li>\n<li><b>Кардио-блок для ног в конце каждой тренировки:<\/b> ходьба в горку, лёгкий бег, гребля. Без спринтов и велотренажёра на большом сопротивлении.<\/li>\n<\/ul>\n<p>Совсем убирать силовую на ноги не стоит. Мышцы ног дают усилие на педали тормоза и удерживают расход калорий. При дефиците и малом объёме нагрузки они не растут, а бедро становится меньше и плотнее.<\/p>\n<p><strong>Руки — жир поверх мышц.<\/strong> Мягкие в покое и твёрдые в напряжении — значит, мышцы есть, их закрывает жировой слой. Решение то же: дефицит плюс две тренировки верха за цикл. Трицепс занимает около двух третей объёма руки выше локтя, поэтому на него идёт 6 подходов за цикл.<\/p>\n<p><strong>Что нужно для картинга.<\/strong><\/p>\n<div class=\"tw\"><table>\n<thead>\n<tr>\n<th>Зона<\/th>\n<th>Зачем на трассе<\/th>\n<th>Где в плане<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>Шея<\/td>\n<td>Держит голову со шлемом при боковых перегрузках<\/td>\n<td>Тренировки C и D<\/td>\n<\/tr>\n<tr>\n<td>Предплечья и хват<\/td>\n<td>Руль без усилителя, вибрации<\/td>\n<td>A и D<\/td>\n<\/tr>\n<tr>\n<td>Плечи и верх спины<\/td>\n<td>Работа рулём на длинной дистанции<\/td>\n<td>A, C, D<\/td>\n<\/tr>\n<tr>\n<td>Кор (мышцы корпуса)<\/td>\n<td>Не даёт корпусу «складываться» в поворотах<\/td>\n<td>A, B, D<\/td>\n<\/tr>\n<\/tbody>\n<\/table><\/div>"}, {"title": "Питание: дефицит и белок", "html": "<p>Ориентир — около 1700 ккал и 120–130 г белка в день. Без дефицита калорий тренировки дадут силу, но не снимут вес.<\/p>\n<p>Шаг 1 — базовый обмен по формуле Миффлина — Сан-Жеора для женщин:<\/p>\n<div class=\"formula\">BMR = 10·m + 6,25·h − 5·a − 161<\/div>\n\n<ul>\n<li><b>BMR — базовый обмен:<\/b> сколько ккал в сутки тело тратит в полном покое.<\/li>\n<li>m — масса тела в кг (76).<\/li>\n<li>h — рост в см (170).<\/li>\n<li>a — возраст в годах.<\/li>\n<li>161 — постоянная поправка формулы для женщин.<\/li>\n<\/ul>\n<p>Шаг 2 — суточный расход:<\/p>\n<div class=\"formula\">TDEE = BMR · k<\/div>\n\n<ul>\n<li>TDEE — суточный расход с учётом движения, ккал.<\/li>\n<li>k — коэффициент активности. Для этого плана (4 тренировки с кардио-блоком за 7–8 дней, 8–10 тысяч шагов) берём 1,45.<\/li>\n<\/ul>\n<p>Шаг 3 — цель по калориям: TDEE минус 550 ккал.<\/p>\n<p>Пример для 24 лет (возраст я не знаю — подставь свой): BMR = 760 + 1062,5 − 120 − 161 ≈ 1540 ккал. TDEE ≈ 1540 × 1,45 ≈ 2235 ккал. Цель ≈ 2235 − 550 ≈ 1700 ккал. Каждые 5 лет возраста меняют BMR всего на 25 ккал.<\/p>\n<p>Почему 550: дефицит 550 ккал в сутки — это 3850 ккал в неделю. В 1 кг жира около 7700 ккал, значит уходит примерно 0,5 кг жира в неделю.<\/p>\n<p>Правила:<\/p>\n<ul>\n<li>Белок 120–130 г в день — около 1,8–2 г на кг целевого веса 66 кг. Он сохраняет мышцы верха при дефиците.<\/li>\n<li><b>Не опускайся ниже 1500 ккал:<\/b> падает сила и восстановление.<\/li>\n<li>В гоночные дни ешь на уровне TDEE, без дефицита. Концентрация на трассе важнее 500 ккал.<\/li>\n<li>Считай калории в приложении первые 3–4 недели, пока не начнёшь оценивать порции на глаз.<\/li>\n<\/ul>"}, {"title": "Цикл из 4 тренировок", "html": "<p>Тренировки идут по кругу: A → B → C → D → снова A. К дням недели они не привязаны: приходишь в зал и делаешь следующую по порядку.<\/p>\n<div class=\"tw\"><table>\n<thead>\n<tr>\n<th>Тренировка<\/th>\n<th>Силовая часть<\/th>\n<th>Блок для ног в конце<\/th>\n<th>Всего<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>A<\/td>\n<td>Верх: жим и тяга<\/td>\n<td>Ходьба в горку, 20 мин<\/td>\n<td>80 мин<\/td>\n<\/tr>\n<tr>\n<td>B<\/td>\n<td>Низ (поддержка) и кор<\/td>\n<td>Лёгкая ходьба в горку, 15 мин<\/td>\n<td>70 мин<\/td>\n<\/tr>\n<tr>\n<td>C<\/td>\n<td>Верх: тяга, плечи, руки, шея<\/td>\n<td>Бег с ходьбой, 20 мин<\/td>\n<td>80 мин<\/td>\n<\/tr>\n<tr>\n<td>D<\/td>\n<td>Всё тело и картинг-блок<\/td>\n<td>Гребля 12 мин и ходьба 10 мин<\/td>\n<td>60 мин<\/td>\n<\/tr>\n<\/tbody>\n<\/table><\/div>\n<p>Правила цикла:<\/p>\n<ul>\n<li>Темп — 3–4 тренировки за 7 дней. При четырёх цикл занимает неделю, при трёх — 9–10 дней.<\/li>\n<li>Не больше двух тренировок подряд, потом день отдыха.<\/li>\n<li>Порядок не меняется. После любого перерыва делай ту тренировку, которая стоит следующей.<\/li>\n<li>День на трассе — это день отдыха от зала.<\/li>\n<li>Если до трассы меньше 48 часов, пропусти шею (C7, D7) и запястья (D5): уставшая шея хуже держит голову в поворотах.<\/li>\n<li>Мало времени — сделай силовую часть в зале, а блок для ног перенеси на вечер того же дня.<\/li>\n<\/ul>"}, {"title": "Веса и прогрессия", "html": "<p>Рабочий вес — тот, с которым ты заканчиваешь подход, имея 2 повтора в запасе. Запас повторов (по-английски RIR, reps in reserve) — сколько ещё повторов ты сделала бы с чистой техникой.<\/p>\n<p><strong>Как подобрать вес на первой тренировке.<\/strong><\/p>\n<ol>\n<li>Возьми вес из строки «старт» у упражнения и сделай 10 повторов.<\/li>\n<li>Было легко, в запасе 5 и больше — прибавь 10–20% и повтори через 2 минуты.<\/li>\n<li>В запасе 2–3 повтора — это твой рабочий вес.<\/li>\n<li>Не дотянула до нижней границы повторов — убавь на 10–20%.<\/li>\n<\/ol>\n<p>Стартовые веса в плане рассчитаны на новичка в зале. Есть опыт — начинай выше, критерий тот же: 2 повтора в запасе. На блочных тренажёрах цифры на плитках у разных производителей не совпадают, поэтому ориентируйся на запас, а не на цифру.<\/p>\n<p><strong>Когда прибавлять — двойная прогрессия.<\/strong> У каждого упражнения диапазон, например 8–12. Работаешь с одним весом, пока во всех подходах не выйдет верхняя граница. Потом прибавляешь вес и снова начинаешь с нижней.<\/p>\n<p>Пример — тяга верхнего блока, 3 подхода по 8–12:<\/p>\n<div class=\"tw\"><table>\n<thead>\n<tr>\n<th>Цикл<\/th>\n<th>Вес<\/th>\n<th>Повторы в подходах<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>1<\/td>\n<td>30 кг<\/td>\n<td>10 / 9 / 8<\/td>\n<\/tr>\n<tr>\n<td>2<\/td>\n<td>30 кг<\/td>\n<td>11 / 10 / 9<\/td>\n<\/tr>\n<tr>\n<td>3<\/td>\n<td>30 кг<\/td>\n<td>12 / 12 / 10<\/td>\n<\/tr>\n<tr>\n<td>4<\/td>\n<td>30 кг<\/td>\n<td>12 / 12 / 12 — пора прибавлять<\/td>\n<\/tr>\n<tr>\n<td>5<\/td>\n<td>32,5 кг<\/td>\n<td>9 / 8 / 8<\/td>\n<\/tr>\n<\/tbody>\n<\/table><\/div>\n<p>Шаг прибавки: блоки и штанга на верх — 2,5 кг, гантели — 1–2 кг на каждую, упражнения на ноги — 5 кг.<\/p>\n<p><strong>Общие правила.<\/strong><\/p>\n<ul>\n<li><b>Разминка:<\/b> 5 минут лёгкого кардио, затем перед первым упражнением на группу мышц два подхода — 50% рабочего веса на 10 повторов и 75% на 5.<\/li>\n<li><b>Отдых между подходами:<\/b> 2–3 минуты в жимах и тягах, 60–90 секунд в упражнениях на одну мышцу.<\/li>\n<li><b>Темп:<\/b> опускай вес 2–3 секунды, поднимай за 1.<\/li>\n<li>Записывай вес и повторы каждого подхода — без журнала прогрессия не работает.<\/li>\n<\/ul>"}, {"title": "Кардио для ног и шаги", "html": "<p>Блок для ног стоит в конце каждой тренировки: за цикл это 77 минут ходьбы, бега и гребли. Почти весь он идёт в зоне 2 — на пульсе, при котором можешь говорить полными фразами.<\/p>\n<p>Почему так: ноги худеют только от общего расхода калорий. Долгая работа с малым сопротивлением тратит много и не даёт мышцам стимула расти. Спринты, прыжки и педали на большом сопротивлении действуют наоборот: они растят квадрицепс и икры.<\/p>\n<p>Границы зоны 2 по пульсу:<\/p>\n<div class=\"formula\">HR<sub>max<\/sub> ≈ 220 − a, &emsp; HR<sub>z2<\/sub> = (0,60 … 0,70) · HR<sub>max<\/sub><\/div>\n\n<ul>\n<li>HR_max — максимальный пульс, ударов в минуту (оценка, погрешность до 10 ударов).<\/li>\n<li>a — возраст в годах.<\/li>\n<li>HR_z2 — рабочий диапазон пульса зоны 2.<\/li>\n<\/ul>\n<p>Пример для 24 лет: HR_max ≈ 196, зона 2 — от 118 до 137 ударов в минуту.<\/p>\n<div class=\"tw\"><table>\n<thead>\n<tr>\n<th>Тренажёр<\/th>\n<th>Настройки<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>Беговая дорожка, ходьба в горку (Incline Treadmill Walk)<\/td>\n<td>Уклон 8–12%, скорость 4,5–5,5 км/ч, за поручни не держаться<\/td>\n<\/tr>\n<tr>\n<td>Эллиптический тренажёр (Elliptical Trainer)<\/td>\n<td>Среднее сопротивление, работать и руками<\/td>\n<\/tr>\n<tr>\n<td>Гребной тренажёр (Rowing Machine)<\/td>\n<td>20–24 гребка в минуту, ровный темп<\/td>\n<\/tr>\n<tr>\n<td>Лёгкий бег (Easy Jog)<\/td>\n<td>Разговорный темп, 6,5–8 км/ч, уклон 1%<\/td>\n<\/tr>\n<\/tbody>\n<\/table><\/div>\n<p>Шаги — 8–10 тысяч в день, включая дни отдыха. В день без зала можно добавить 30–40 минут быстрой ходьбы или лёгкого бега — это ещё 150–250 ккал расхода. В день гонки и на трассе кардио не нужно: заезды уже дают нагрузку.<\/p>"}, {"title": "12 циклов по этапам", "html": "<p>Этапы считаются в циклах: один цикл — это все четыре тренировки от A до D. Блоки для ног на всех этапах остаются прежними, меняется только прогрессия бега в C8.<\/p>\n<div class=\"tw\"><table>\n<thead>\n<tr>\n<th>Циклы<\/th>\n<th>Этап<\/th>\n<th>Что меняется в силовой части<\/th>\n<\/tr>\n<\/thead>\n<tbody>\n<tr>\n<td>1–2<\/td>\n<td>Вработка<\/td>\n<td>2 подхода вместо 3, в запасе 3 повтора. Задача — техника и подбор весов<\/td>\n<\/tr>\n<tr>\n<td>3–6<\/td>\n<td>Объём<\/td>\n<td>3 подхода, в запасе 2 повтора, двойная прогрессия<\/td>\n<\/tr>\n<tr>\n<td>7<\/td>\n<td>Разгрузка<\/td>\n<td>Те же веса, по 2 подхода. Тело восстанавливается, сила после неё растёт<\/td>\n<\/tr>\n<tr>\n<td>8–12<\/td>\n<td>Сила<\/td>\n<td>A1, A2, B1, C1, C2 — по 4 подхода на 6–8 повторов с большим весом. Остальное без изменений<\/td>\n<\/tr>\n<\/tbody>\n<\/table><\/div>\n<p>После 12-го цикла перемерь все мерки от A до N и пришли мне — пересоберём план под новый вес.<\/p>"}, {"title": "Контроль прогресса", "html": "<p>Вес смотри по среднему за неделю, мерки — раз в две недели. Отдельное взвешивание скачет на 1–1,5 кг из-за воды и ничего не значит.<\/p>\n<p>Как измерять:<\/p>\n<ul>\n<li>Вес — каждое утро после туалета, до еды. В таблицу идёт среднее за неделю.<\/li>\n<li>Мерки — утром, той же лентой, в тех же точках, что на бланке.<\/li>\n<li><b>Фото — раз в две недели, тот же свет и ракурс:<\/b> спереди, сбоку, сзади.<\/li>\n<\/ul>\n<p>Когда менять план:<\/p>\n<ul>\n<li>Средний вес не снижается 2 недели подряд — убери 100–150 ккал или добавь 2000 шагов в день.<\/li>\n<li>Вес падает быстрее 1 кг в неделю после третьей недели — добавь 150–200 ккал.<\/li>\n<li>Рабочие веса падают 2 недели подряд — дефицит слишком большой, добавь 100–150 ккал и проверь сон.<\/li>\n<li>Боль в суставе или шее, а не усталость в мышце — убери упражнение и возьми альтернативу. Если есть травмы или хронические болезни, согласуй нагрузку с врачом.<\/li>\n<\/ul>"}, {"title": "Источник иллюстраций", "html": "<p>Фото упражнений взяты из открытой базы <a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/yuhonas/free-exercise-db\">free-exercise-db<\/a>, которая передана в общественное достояние. Без фото остались B8, D6, D7 и D9: они повторяют технику A8, A6 и C7.<\/p>"}], "goal": 66, "cycles": 12, "seed": {"date": "2026-10-09", "weight": 76, "waist": 84, "hips": 109, "thigh": 66, "bicep": 29, "chest": 100, "calf": 38}};const STANDALONE=true;</script>
+<script>
+(function(){
+'use strict';
+const $=(s,r)=>(r||document).querySelector(s);
+const $$=(s,r)=>Array.prototype.slice.call((r||document).querySelectorAll(s));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ORDER=['A','B','C','D'];
+const SHORT={A:'верх',B:'низ',C:'верх',D:'всё тело'};
+const MONTHS=['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+const MGEN=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+const TABS=['today','workouts','measures','plan'];
+const METRICS=[
+  {k:'weight',label:'Вес',unit:'кг',goal:PLAN.goal},
+  {k:'waist',label:'Талия',unit:'см'},{k:'hips',label:'Таз',unit:'см'},{k:'thigh',label:'Бедро',unit:'см'},
+  {k:'bicep',label:'Бицепс',unit:'см'},{k:'chest',label:'Грудь',unit:'см'},{k:'calf',label:'Икра',unit:'см'}];
+const DAY=864e5;
+const pad=n=>String(n).padStart(2,'0');
+const iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const today=()=>iso(new Date());
+const parseISO=s=>{const p=s.split('-').map(Number);return new Date(p[0],p[1]-1,p[2]);};
+const validISO=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'');
+const fmtDay=s=>{const d=parseISO(s);return d.getDate()+' '+MGEN[d.getMonth()];};
+const fmtFull=s=>{const p=s.split('-');return p[2]+'.'+p[1]+'.'+p[0];};
+const fmtDM=t=>{const d=new Date(t);return pad(d.getDate())+'.'+pad(d.getMonth()+1);};
+const num=v=>(Math.round(v*10)/10).toLocaleString('ru-RU',{maximumFractionDigits:1});
+const signed=v=>(v>0?'+':v<0?'−':'')+num(Math.abs(v));
+
+function lsGet(k,def){try{const v=localStorage.getItem(k);return v==null?def:JSON.parse(v);}catch(e){return def;}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+
+const now=new Date();
+const S={tab:'today',w:'A',metric:'weight',log:{},measures:{},ready:false,mode:'loading',error:false,
+  calY:now.getFullYear(),calM:now.getMonth(),formOpen:false,formDate:today(),formW:null,confirm:null,expand:false};
+(function(){const h=(location.hash||'').replace('#','');const p=lsGet('trn_ui',{});
+  if(TABS.indexOf(h)>=0)S.tab=h;else if(TABS.indexOf(p.tab)>=0)S.tab=p.tab;
+  if(ORDER.indexOf(p.w)>=0)S.w=p.w;if(METRICS.some(m=>m.k===p.metric))S.metric=p.metric;})();
+const saveUi=()=>lsSet('trn_ui',{tab:S.tab,w:S.w,metric:S.metric});
+
+/* ---------- store ---------- */
+const store={db:null};
+const readLocal=()=>{const v=lsGet('trn_local',null);return v&&v.log&&v.measures?v:{log:{},measures:{}};};
+const persistLocal=()=>lsSet('trn_local',{log:S.log,measures:S.measures});
+async function saveDoc(col,id,body){
+  if(S.mode==='db'){await store.db.doc(col+'/'+id).set(body);}
+  else{S[col]=Object.assign({},S[col]);S[col][id]=body;persistLocal();renderData();}
+}
+async function removeDoc(col,id){
+  if(S.mode==='db'){await store.db.doc(col+'/'+id).delete();}
+  else{S[col]=Object.assign({},S[col]);delete S[col][id];persistLocal();renderData();}
+}
+async function migrate(local){
+  try{
+    let moved=0;
+    for(const col of ['log','measures']){
+      for(const id of Object.keys(local[col]||{})){
+        if(!(id in S[col])){await store.db.doc(col+'/'+id).set(local[col][id]);moved++;}
+      }
+    }
+    if(Object.keys(local.log).length||Object.keys(local.measures).length)lsSet('trn_local',{log:{},measures:{}});
+    if(moved)toast('Перенесено записей из браузера: '+moved);
+  }catch(e){}
+}
+async function initStore(){
+  let db=null;
+  try{if(!STANDALONE&&window.claude&&typeof window.claude.use==='function')db=await window.claude.use('db');}catch(e){db=null;}
+  const local=readLocal();
+  if(STANDALONE&&!lsGet('trn_seeded',false)){
+    if(PLAN.seed&&!Object.keys(local.measures).length)local.measures[PLAN.seed.date]=PLAN.seed;
+    lsSet('trn_local',local);lsSet('trn_seeded',true);
+  }
+  if(!db){S.mode='local';S.log=local.log;S.measures=local.measures;S.ready=true;renderData();return;}
+  store.db=db;S.mode='db';
+  const got={log:false,measures:false};
+  const sub=col=>db.collection(col).limit(1000).onSnapshot(snap=>{
+    const m={};snap.docs.forEach(d=>{const b=d.data();if(b)m[d.id]=b;});S[col]=m;
+    if(!got[col]){got[col]=true;if(got.log&&got.measures){S.ready=true;migrate(local);}}
+    renderData();
+  },()=>{S.error=true;S.ready=true;renderData();});
+  sub('log');sub('measures');
+}
+
+/* ---------- derived ---------- */
+function logList(){
+  return Object.keys(S.log).map(id=>({id:id,date:S.log[id].date,w:S.log[id].w}))
+    .filter(e=>validISO(e.date)&&ORDER.indexOf(e.w)>=0)
+    .sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:(a.w<b.w?-1:1));
+}
+function cycleInfo(){
+  const L=logList(),n=L.length,last=L[n-1];
+  const next=last?ORDER[(ORDER.indexOf(last.w)+1)%4]:'A';
+  const cycle=Math.floor(n/4)+1;
+  const inCycle=L.slice(n-(n%4)).map(e=>e.w);
+  const phase=PLAN.phases.find(p=>cycle>=p.from&&cycle<=p.to)||null;
+  return {L:L,n:n,next:next,cycle:cycle,inCycle:inCycle,phase:phase};
+}
+function measureList(){
+  return Object.keys(S.measures).map(id=>Object.assign({id:id},S.measures[id]))
+    .filter(r=>validISO(r.date)).sort((a,b)=>a.date<b.date?-1:1);
+}
+
+/* ---------- toast ---------- */
+let toastT=null;
+function toast(msg){const t=$('#toast');t.textContent=msg;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>{t.hidden=true;},2400);}
+const fail=e=>toast('Не сохранилось. Проверь связь и попробуй ещё раз.');
+
+/* ---------- today ---------- */
+function renderToday(){
+  const el=$('#tab-today');
+  if(!S.ready){el.innerHTML='<div class="card"><div class="eyebrow">Журнал</div><p class="empty">Загружаю записи о тренировках…</p></div>';return;}
+  const c=cycleInfo(),w=PLAN.workouts[c.next];
+  const fw=S.formW||c.next;
+  let h='';
+  if(S.error)h+='<div class="notice">Не удалось загрузить записи. Обнови страницу.</div>';
+  if(S.mode==='local'&&!STANDALONE)h+='<div class="notice">Записи сейчас хранятся только в этом браузере. Открой страницу в Claude под своим аккаунтом, чтобы они сохранялись и были видны с других устройств.</div>';
+  const done=c.cycle>PLAN.cycles;
+  h+='<div class="card lap"><div class="lap-top"><span class="eyebrow">Цикл</span><span class="lap-num">'+Math.min(c.cycle,PLAN.cycles)+'</span><span class="lap-of">/ '+PLAN.cycles+'</span>'+
+     (c.phase&&!done?'<span class="phase">'+esc(c.phase.name)+'</span>':'')+'</div><div class="sectors">';
+  ORDER.forEach(L=>{const st=c.inCycle.indexOf(L)>=0?'done':(L===c.next?'next':'todo');
+    h+='<div class="sector '+st+'"><div class="bar"></div><div class="lbl"><b>'+L+'</b>'+esc(SHORT[L])+'</div></div>';});
+  h+='</div><p class="sub">'+(done?'Все '+PLAN.cycles+' циклов пройдены. Перемерь мерки и обнови план.':
+     (c.phase?esc(c.phase.text)+'.':''))+'</p>'+
+     '<p class="empty">Всего тренировок: '+c.n+'</p></div>';
+  h+='<div class="card"><div class="eyebrow">Следующая тренировка</div><div class="next-row"><div class="big-letter">'+c.next+'</div><div>'+
+     '<div class="h2">'+esc(w.title)+'</div><p class="sub">Около '+w.min+' мин · блок для ног: '+esc(w.legs.charAt(0).toLowerCase()+w.legs.slice(1))+'</p></div></div>'+
+     '<div class="actions"><button class="btn primary" type="button" data-act="mark">Отметить тренировку</button>'+
+     '<button class="btn" type="button" data-act="open" data-w="'+c.next+'">Открыть упражнения</button></div>';
+  if(S.formOpen){
+    h+='<form class="mark" id="mark-form"><div class="field"><label for="mark-date">Дата</label><input type="date" id="mark-date" value="'+esc(S.formDate)+'" max="2100-01-01"></div>'+
+       '<div class="field"><span class="lab">Какая тренировка</span><div class="seg" role="group" aria-label="Какая тренировка">';
+    ORDER.forEach(L=>{h+='<button type="button" data-fw="'+L+'" aria-pressed="'+(L===fw)+'">'+L+'</button>';});
+    h+='</div></div><div class="actions"><button class="btn primary" type="submit">Сохранить</button><button class="btn ghost" type="button" data-act="cancel">Отмена</button></div></form>';
+  }
+  h+='</div>';
+  /* calendar */
+  const y=S.calY,m=S.calM,first=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),lead=(first.getDay()+6)%7,td=today();
+  const by={};c.L.forEach(e=>{(by[e.date]=by[e.date]||[]).push(e.w);});
+  h+='<div class="card"><div class="cal-head"><div class="m">'+MONTHS[m]+' '+y+'</div><div class="cal-nav">'+
+     '<button type="button" data-cal="-1" aria-label="Предыдущий месяц">‹</button><button type="button" data-cal="1" aria-label="Следующий месяц">›</button></div></div><div class="cal">';
+  ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'].forEach(d=>{h+='<div class="wd">'+d+'</div>';});
+  for(let i=0;i<lead;i++)h+='<div class="day out"></div>';
+  for(let d=1;d<=days;d++){const ds=y+'-'+pad(m+1)+'-'+pad(d),ws=by[ds];
+    h+='<button type="button" class="day'+(ds===td?' today':'')+(ws?' has':'')+'" data-day="'+ds+'" aria-label="'+d+' '+MGEN[m]+(ws?', тренировка '+ws.join(', '):'')+'">'+d+(ws?'<span class="w">'+ws.join('')+'</span>':'')+'</button>';}
+  h+='</div><p class="empty">Нажми на день, чтобы отметить тренировку за эту дату.</p></div>';
+  /* month list */
+  const pre=y+'-'+pad(m+1)+'-',inMonth=c.L.filter(e=>e.date.indexOf(pre)===0).reverse();
+  h+='<div class="card"><div class="h2">Записи за '+MONTHS[m]+'</div>';
+  if(!inMonth.length)h+='<p class="empty">'+(c.n?'В этом месяце записей нет.':'Журнал пуст. Сделай тренировку A и отметь её здесь.')+'</p>';
+  else{h+='<div class="rows">';inMonth.forEach(e=>{const cf=S.confirm===('log/'+e.id);
+    h+='<div class="row"><div class="l">'+e.w+'</div><div class="t">'+esc(PLAN.workouts[e.w].title)+'<small>'+fmtDay(e.date)+'</small></div>'+
+       '<button type="button" class="btn small'+(cf?' danger':'')+'" data-del="log/'+esc(e.id)+'">'+(cf?'Точно удалить?':'Удалить')+'</button></div>';});h+='</div>';}
+  h+='</div>';
+  el.innerHTML=h;
+}
+async function markWorkout(date,w){
+  if(!validISO(date)){toast('Выбери дату');return;}
+  try{await saveDoc('log',date+'_'+w,{date:date,w:w,ts:Date.now()});S.formOpen=false;S.formW=null;
+    const d=parseISO(date);S.calY=d.getFullYear();S.calM=d.getMonth();renderToday();toast('Тренировка '+w+' отмечена за '+fmtDay(date));}
+  catch(e){fail(e);}
+}
+
+/* ---------- workouts ---------- */
+function renderWorkouts(){
+  $('#w-seg').innerHTML=ORDER.map(L=>'<button type="button" data-w="'+L+'" aria-pressed="'+(L===S.w)+'">'+L+'</button>').join('');
+  const w=PLAN.workouts[S.w];
+  let h='<div class="card w-head"><div class="eyebrow">Тренировка '+S.w+' · около '+w.min+' мин</div><div class="h2">'+esc(w.title)+'</div><p class="sub">'+esc(w.intro)+'</p>'+
+    '<div class="tools"><button type="button" class="btn small" data-act="expand">'+(S.expand?'Свернуть технику':'Развернуть технику везде')+'</button></div></div>';
+  w.ex.forEach(e=>{
+    h+='<article class="ex"><div class="ex-h"><span class="code">'+esc(e.code)+'</span><div><h3>'+esc(e.name)+'</h3>'+(e.en?'<div class="en">'+esc(e.en)+'</div>':'')+'</div></div><div class="chips">';
+    e.chips.forEach((c,i)=>{h+='<span class="chip'+(i===0?' strong':'')+'">'+esc(c)+'</span>';});
+    h+='</div>';
+    e.imgs.forEach(im=>{h+='<img loading="lazy" decoding="async" src="img/'+im.f+'.jpg" width="'+im.w+'" height="'+im.h+'" alt="'+esc(im.alt)+'">';});
+    h+='<details'+(S.expand?' open':'')+'><summary>Техника, ошибки и замены</summary><div class="prose">'+e.html+'</div></details>';
+    if(e.links.length){h+='<div class="links">';e.links.forEach(l=>{h+='<a target="_blank" rel="noopener" href="'+esc(l.u)+'">Ещё '+esc(l.t)+' ↗</a>';});h+='</div>';}
+    h+='</article>';
+  });
+  h+='<div class="actions"><button type="button" class="btn primary" data-act="done-today" data-w="'+S.w+'">Отметить тренировку '+S.w+' за сегодня</button></div>';
+  $('#w-body').innerHTML=h;
+}
+
+/* ---------- measures ---------- */
+function niceStep(x){const p=Math.pow(10,Math.floor(Math.log10(x))),f=x/p;return (f<=1?1:f<=2?2:f<=5?5:10)*p;}
+function renderTiles(){
+  const rows=measureList().filter(r=>typeof r.weight==='number'),el=$('#tiles');
+  if(!S.ready){el.innerHTML='';return;}
+  if(!rows.length){el.innerHTML='<div class="tile" style="grid-column:1/-1"><div class="k">Вес</div><div class="empty">Добавь первую запись с весом, и здесь появятся цифры.</div></div>';return;}
+  const a=rows[0].weight,b=rows[rows.length-1].weight,d=b-a,left=b-PLAN.goal;
+  el.innerHTML='<div class="tile"><div class="k">Вес сейчас</div><div class="v">'+num(b)+' <small>кг</small></div></div>'+
+    '<div class="tile"><div class="k">С '+fmtDay(rows[0].date)+'</div><div class="v'+(d<0?' good':'')+'">'+signed(d)+' <small>кг</small></div></div>'+
+    '<div class="tile"><div class="k">До цели '+PLAN.goal+' кг</div><div class="v">'+(left>0?num(left)+' <small>кг</small>':'<small>достигнута</small>')+'</div></div>';
+}
+function renderChips(){
+  $('#mchips').innerHTML=METRICS.map(m=>'<button type="button" data-metric="'+m.k+'" aria-pressed="'+(m.k===S.metric)+'">'+m.label+'</button>').join('');
+}
+let chartPts=[],chartGeo=null;
+function drawChart(){
+  const box=$('#chart'),m=METRICS.find(x=>x.k===S.metric);
+  $('#chart-title').textContent=m.label+', '+m.unit;
+  if(!S.ready){box.innerHTML='<p class="empty">Загружаю мерки…</p>';return;}
+  const pts=measureList().filter(r=>typeof r[m.k]==='number'&&isFinite(r[m.k])).map(r=>({d:r.date,t:parseISO(r.date).getTime(),v:r[m.k]}));
+  chartPts=pts;
+  if(!pts.length){chartGeo=null;box.innerHTML='<p class="empty">По этой мерке записей пока нет. Добавь первую в форме ниже.</p>';return;}
+  const W=Math.max(280,Math.round(box.clientWidth||320)),H=236,ml=40,mr=48,mt=16,mb=30;
+  let t0=pts[0].t,t1=pts[pts.length-1].t;
+  if(t1-t0<14*DAY){const mid=(t0+t1)/2;t0=mid-7*DAY;t1=mid+7*DAY;}
+  let vals=pts.map(p=>p.v);if(m.goal!=null)vals=vals.concat([m.goal]);
+  let lo=Math.min.apply(null,vals),hi=Math.max.apply(null,vals);
+  if(hi-lo<2){lo-=1;hi+=1;}
+  const step=niceStep((hi-lo)/5);
+  lo=Math.floor(lo/step+1e-9)*step;hi=Math.ceil(hi/step-1e-9)*step;
+  if(m.goal!=null&&lo>=m.goal)lo-=step;
+  const X=t=>ml+(t-t0)/(t1-t0)*(W-ml-mr),Y=v=>mt+(hi-v)/(hi-lo)*(H-mt-mb);
+  let s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(m.label)+' по датам. Те же значения есть в таблице ниже.">';
+  for(let v=lo;v<=hi+1e-9;v+=step){const y=Y(v).toFixed(1);
+    s+='<line class="c-grid" x1="'+ml+'" x2="'+(W-mr)+'" y1="'+y+'" y2="'+y+'" fill="none"/><text class="c-tick" x="'+(ml-7)+'" y="'+(+y+4)+'" text-anchor="end">'+num(v)+'</text>';}
+  for(let i=0;i<4;i++){const t=t0+(t1-t0)*i/3;
+    s+='<text class="c-tick" x="'+X(t).toFixed(1)+'" y="'+(H-9)+'" text-anchor="'+(i===0?'start':i===3?'end':'middle')+'">'+fmtDM(t)+'</text>';}
+  if(m.goal!=null){const gy=Y(m.goal).toFixed(1);
+    s+='<line class="c-goal" x1="'+ml+'" x2="'+(W-mr)+'" y1="'+gy+'" y2="'+gy+'" fill="none"/><text class="c-tick" x="'+(W-mr-4)+'" y="'+(+gy-6)+'" text-anchor="end">цель '+num(m.goal)+' '+m.unit+'</text>';}
+  s+='<line class="c-cross" id="c-cross" x1="0" x2="0" y1="'+mt+'" y2="'+(H-mb)+'" fill="none" visibility="hidden"/>';
+  if(pts.length>1)s+='<path class="c-line" d="'+pts.map((p,i)=>(i?'L':'M')+X(p.t).toFixed(1)+' '+Y(p.v).toFixed(1)).join(' ')+'"/>';
+  pts.forEach((p,i)=>{s+='<circle class="c-dot" data-i="'+i+'" cx="'+X(p.t).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="4.5"/>';});
+  const last=pts[pts.length-1];
+  s+='<text class="c-end" x="'+(X(last.t)+9).toFixed(1)+'" y="'+(Y(last.v)+4).toFixed(1)+'">'+num(last.v)+'</text>';
+  s+='<rect id="c-hit" x="'+ml+'" y="0" width="'+(W-ml-mr)+'" height="'+(H-mb)+'" fill="transparent"/></svg><div class="tip" id="c-tip" hidden></div>';
+  if(pts.length===1)s+='<p class="empty">Пока одна запись. После второй точки соединит линия.</p>';
+  box.innerHTML=s;
+  chartGeo={W:W,X:X,Y:Y,unit:m.unit,label:m.label};
+  const hit=$('#c-hit',box),svg=$('svg',box);
+  const show=ev=>{
+    const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*(W/r.width);
+    let bi=0,bd=Infinity;chartPts.forEach((p,i)=>{const d=Math.abs(X(p.t)-px);if(d<bd){bd=d;bi=i;}});
+    const p=chartPts[bi],cx=X(p.t),cy=Y(p.v),k=r.width/W;
+    const cr=$('#c-cross',box);cr.setAttribute('x1',cx);cr.setAttribute('x2',cx);cr.setAttribute('visibility','visible');
+    $$('.c-dot',box).forEach((c,i)=>c.setAttribute('r',i===bi?6.5:4.5));
+    const tip=$('#c-tip',box);tip.innerHTML='<b>'+num(p.v)+' '+m.unit+'</b>'+fmtFull(p.d);tip.hidden=false;
+    const half=tip.offsetWidth/2,left=Math.min(Math.max(cx*k,half+2),r.width-half-2);
+    tip.style.left=left+'px';tip.style.top=Math.max(cy*k-12,tip.offsetHeight+2)+'px';
+  };
+  const hide=()=>{const cr=$('#c-cross',box);if(cr)cr.setAttribute('visibility','hidden');$$('.c-dot',box).forEach(c=>c.setAttribute('r',4.5));const tip=$('#c-tip',box);if(tip)tip.hidden=true;};
+  hit.addEventListener('pointermove',show);hit.addEventListener('pointerdown',show);
+  hit.addEventListener('pointerleave',ev=>{if(ev.pointerType==='mouse')hide();});
+}
+function renderTable(){
+  const el=$('#m-table');
+  if(!S.ready){el.innerHTML='<p class="empty">Загружаю мерки…</p>';return;}
+  const rows=measureList().reverse();
+  if(!rows.length){el.innerHTML='<p class="empty">Записей пока нет. Первая запись станет точкой отсчёта.</p>';return;}
+  let h='<div class="tw"><table class="mt"><thead><tr><th>Дата</th>'+METRICS.map(m=>'<th>'+m.label+'</th>').join('')+'<th></th></tr></thead><tbody>';
+  rows.forEach(r=>{const cf=S.confirm===('measures/'+r.id);
+    h+='<tr><td>'+fmtFull(r.date)+'</td>'+METRICS.map(m=>'<td>'+(typeof r[m.k]==='number'?num(r[m.k]):'—')+'</td>').join('')+
+       '<td class="act"><button type="button" class="btn small" data-edit="'+esc(r.id)+'">Изменить</button>'+
+       '<button type="button" class="btn small'+(cf?' danger':'')+'" data-del="measures/'+esc(r.id)+'">'+(cf?'Точно?':'Удалить')+'</button></td></tr>';});
+  el.innerHTML=h+'</tbody></table></div>';
+}
+function fillForm(date){
+  const r=S.measures[date]||null;
+  METRICS.forEach(m=>{const i=$('#m-'+m.k);i.value=r&&typeof r[m.k]==='number'?String(r[m.k]).replace('.',','):'';});
+  $('#m-hint').textContent=r?'За эту дату запись уже есть. Сохранение её обновит.':'Заполни то, что измерила. Пустые поля не сохраняются.';
+}
+async function submitMeasure(ev){
+  ev.preventDefault();
+  const err=$('#m-err'),date=$('#m-date').value,body={date:date};let n=0,bad=null;
+  METRICS.forEach(m=>{const raw=$('#m-'+m.k).value.trim().replace(',','.');if(!raw)return;
+    const v=Number(raw);if(!isFinite(v)||v<10||v>300){bad=m.label;return;}body[m.k]=Math.round(v*10)/10;n++;});
+  if(!validISO(date)){err.textContent='Выбери дату.';err.hidden=false;return;}
+  if(bad){err.textContent='Проверь поле «'+bad+'»: нужно число, например 75,5.';err.hidden=false;return;}
+  if(!n){err.textContent='Заполни хотя бы одно поле.';err.hidden=false;return;}
+  err.hidden=true;
+  try{await saveDoc('measures',date,body);toast('Запись за '+fmtDay(date)+' сохранена');$('#m-hint').textContent='За эту дату запись уже есть. Сохранение её обновит.';}
+  catch(e){fail(e);}
+}
+
+/* ---------- plan ---------- */
+function renderPlan(){
+  let h=PLAN.ref.map((s,i)=>'<details class="acc"'+(i===0?' open':'')+'><summary>'+esc(s.title)+'</summary><div class="prose">'+s.html+'</div></details>').join('');
+  if(STANDALONE)h+='<div class="card"><div class="h2">Резервная копия</div><p class="sub">Записи лежат только на этом устройстве. Скопируй их в заметки или отправь себе, чтобы не потерять при смене телефона или удалении приложения.</p>'+
+    '<div class="actions"><button type="button" class="btn" data-act="export">Скопировать записи</button><button type="button" class="btn" data-act="import">Восстановить из текста</button></div>'+
+    '<div class="field"><label for="bk-text">Текст резервной копии</label><textarea id="bk-text" rows="4" spellcheck="false" autocomplete="off"></textarea></div><p class="sub" id="bk-msg" role="status"></p></div>';
+  $('#tab-plan').innerHTML=h;
+}
+function exportData(){
+  const t=JSON.stringify({app:'cycle-ad',v:1,log:S.log,measures:S.measures}),ta=$('#bk-text'),msg=$('#bk-msg');
+  ta.value=t;ta.focus();ta.select();
+  const ok=()=>{msg.textContent='Скопировано. Вставь текст в заметки или в сообщение себе.';};
+  const manual=()=>{msg.textContent='Текст выделен в поле. Скопируй его вручную.';};
+  try{navigator.clipboard.writeText(t).then(ok,manual);}catch(e){manual();}
+}
+function importData(){
+  const msg=$('#bk-msg');let o=null;
+  try{o=JSON.parse($('#bk-text').value);}catch(e){o=null;}
+  if(!o||typeof o.log!=='object'||typeof o.measures!=='object'||!o.log||!o.measures){msg.textContent='Это не похоже на резервную копию. Вставь в поле текст, который дала кнопка «Скопировать записи».';return;}
+  const log=Object.assign({},S.log),ms=Object.assign({},S.measures);let a=0,b=0;
+  Object.keys(o.log).forEach(id=>{const e=o.log[id];if(e&&validISO(e.date)&&ORDER.indexOf(e.w)>=0){log[e.date+'_'+e.w]={date:e.date,w:e.w,ts:Number(e.ts)||0};a++;}});
+  Object.keys(o.measures).forEach(id=>{const e=o.measures[id];if(!e||!validISO(e.date))return;const r={date:e.date};let n=0;
+    METRICS.forEach(m=>{if(typeof e[m.k]==='number'&&isFinite(e[m.k])){r[m.k]=e[m.k];n++;}});if(n){ms[e.date]=r;b++;}});
+  S.log=log;S.measures=ms;persistLocal();renderData();
+  msg.textContent='Восстановлено: тренировок '+a+', записей мерок '+b+'.';
+}
+
+/* ---------- shell ---------- */
+function renderSync(){
+  const el=$('#sync');el.className='sync'+((S.mode==='db'&&!S.error)||(STANDALONE&&S.ready)?' ok':S.mode==='local'?' local':'');
+  $('span',el).textContent=!S.ready?'Загрузка записей…':S.error?'Записи не загрузились':S.mode==='db'?'Записи сохраняются':STANDALONE?'Хранится на этом устройстве':'Только этот браузер';
+}
+function renderData(){renderSync();renderToday();renderTiles();if(S.tab==='measures')drawChart();renderTable();}
+function showTab(t,push){
+  S.tab=t;TABS.forEach(n=>{$('#tab-'+n).hidden=n!==t;});
+  $$('.nav button').forEach(b=>{if(b.dataset.tab===t)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
+  if(t==='measures')drawChart();
+  saveUi();if(push){try{history.replaceState(null,'','#'+t);}catch(e){}window.scrollTo(0,0);}
+}
+
+document.addEventListener('click',ev=>{
+  const b=ev.target.closest('button');if(!b)return;
+  const d=b.dataset;
+  if(d.del){
+    if(S.confirm===d.del){const p=d.del.split('/');S.confirm=null;removeDoc(p[0],p[1]).then(()=>toast('Запись удалена'),fail);renderData();}
+    else{S.confirm=d.del;renderToday();renderTable();}
+    return;
+  }
+  if(S.confirm){S.confirm=null;renderToday();renderTable();}
+  if(d.tab){showTab(d.tab,true);return;}
+  if(d.act==='mark'){S.formOpen=!S.formOpen;S.formDate=today();S.formW=null;renderToday();return;}
+  if(d.act==='cancel'){S.formOpen=false;S.formW=null;renderToday();return;}
+  if(d.act==='open'){S.w=d.w;renderWorkouts();showTab('workouts',true);return;}
+  if(d.act==='expand'){S.expand=!S.expand;renderWorkouts();return;}
+  if(d.act==='export'){exportData();return;}
+  if(d.act==='import'){importData();return;}
+  if(d.act==='done-today'){markWorkout(today(),d.w);return;}
+  if(d.fw){S.formW=d.fw;const md=$('#mark-date');if(md)S.formDate=md.value;renderToday();return;}
+  if(d.cal){let m=S.calM+Number(d.cal),y=S.calY;if(m<0){m=11;y--;}if(m>11){m=0;y++;}S.calM=m;S.calY=y;renderToday();return;}
+  if(d.day){S.formOpen=true;S.formDate=d.day;renderToday();const f=$('#mark-form');if(f&&f.scrollIntoView)f.scrollIntoView({block:'center'});return;}
+  if(d.w&&b.parentNode.id==='w-seg'){S.w=d.w;saveUi();renderWorkouts();window.scrollTo(0,0);return;}
+  if(d.metric){S.metric=d.metric;saveUi();renderChips();drawChart();return;}
+  if(d.edit){$('#m-date').value=d.edit;fillForm(d.edit);const f=$('#m-form');if(f.scrollIntoView)f.scrollIntoView({block:'start'});return;}
+});
+document.addEventListener('submit',ev=>{
+  if(ev.target.id==='mark-form'){ev.preventDefault();const c=cycleInfo();markWorkout($('#mark-date').value,S.formW||c.next);}
+});
+document.addEventListener('change',ev=>{
+  if(ev.target.id==='mark-date')S.formDate=ev.target.value;
+  if(ev.target.id==='m-date')fillForm(ev.target.value);
+});
+$('#m-form').addEventListener('submit',submitMeasure);
+let rz=null;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{if(S.tab==='measures')drawChart();},150);});
+window.addEventListener('hashchange',()=>{const h=(location.hash||'').replace('#','');if(TABS.indexOf(h)>=0&&h!==S.tab)showTab(h,false);});
+
+$('#m-date').value=today();
+renderWorkouts();renderPlan();renderChips();renderData();showTab(S.tab,false);
+initStore();
+if(STANDALONE&&'serviceWorker' in navigator&&/^https?:$/.test(location.protocol)){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+})();
+</script>
+</body></html>

@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'app.cyclead'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'app.cyclead'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // One key for every build, so a new APK installs over the old one and the saved records stay.
+    signingConfigs {
+        shared {
+            storeFile file('cyclead.jks')
+            storePassword 'cyclead'
+            keyAlias 'cyclead'
+            keyPassword 'cyclead'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.shared
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.shared
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
